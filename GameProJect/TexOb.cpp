@@ -24,7 +24,7 @@ void TexOb::init(SDL_Renderer* renderer) {
 void TexOb::render(SDL_Renderer* renderer) {
 	if (visiable) {
 		SDL_RenderSetScale(renderer, sizex, sizey);
-		SDL_Rect pos = toSDL_Rect(position, (text == NULL) ? texture->getWidth() : text->w, (text == NULL) ? texture->getHeight() : text->h);
+		SDL_Rect pos = Util::toSDL_Rect(position, (text == NULL) ? texture->getWidth() : text->w, (text == NULL) ? texture->getHeight() : text->h);
 		SDL_Texture* t = (text == NULL) ? texture->getTexture() : text->texture;
 		SDL_RenderCopy(renderer, t, NULL, &pos);
 		SDL_RenderSetScale(renderer, 1, 1);

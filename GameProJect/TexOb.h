@@ -1,6 +1,6 @@
 #pragma once
 #include "GameObject.h"
-#include "Util.cpp"
+#include "Util.h"
 class TexOb : public GameObject
 {
 private:
@@ -39,7 +39,7 @@ public:
 	void setTexture(Text* a);
 
 	void setColorMod(Uint8 r, Uint8 g, Uint8 b) {
-		SDL_SetTextureColorMod((text == NULL) ? texture->getTexture() : text->texture, r, g, b);
+		SDL_SetTextureColorMod((text == NULL) ? texture->getTexture() : text->texture, r,g,b);
 	}
 
 	~TexOb();

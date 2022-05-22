@@ -42,6 +42,7 @@ void ButtonList::eventCheck(SDL_Event* Event)
 	if (Event->type == SDL_KEYDOWN) {
 		switch (Event->key.keysym.sym){
 			case SDLK_TAB: 
+				if (!isChangeButton) break;
 				cur++;
 				cur = cur % length;
 				break;

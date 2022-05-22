@@ -1,22 +1,12 @@
 #pragma once
+#include "Util.h"
 #include <SDL.h>
 #include <string>
 #include <SDL_ttf.h>
+#include "Vector2D.h"
 
-struct Text {
-	SDL_Texture* texture;
-	int w;
-	int h;
 
-	~Text() {
-		if (texture != NULL) {
-			SDL_DestroyTexture(texture);
-			texture = NULL;
-		}
-	}
-};
-
-inline void load(Text &res , SDL_Renderer* renderer, std::string text, std::string font, int size) {
+void Util::load(Text &res , SDL_Renderer* renderer, std::string text, std::string font, int size) {
 	TTF_Font* f = TTF_OpenFont(font.c_str(), size);
 	SDL_Surface* sur;
 	if (f == NULL)
@@ -42,11 +32,11 @@ inline void load(Text &res , SDL_Renderer* renderer, std::string text, std::stri
 	return;
 }
 
-inline void deload(Text& res) {
+void Util::deload(Text& res) {
 	SDL_DestroyTexture(res.texture);
 }
 
-inline SDL_Rect toSDL_Rect(Vector2D position, int w, int h) {
+SDL_Rect Util::toSDL_Rect(Vector2D position, int w, int h) {
 	SDL_Rect a;
 	a.x = (int)position.getX();
 	a.y = (int)position.getY();

@@ -68,6 +68,9 @@
     <ClInclude Include="ButtonList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="AbOb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -84,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TextInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

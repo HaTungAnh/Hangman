@@ -20,11 +20,19 @@ class ButtonList : GameObject
 private:
 	std::map<int,SButton> buttonlist;
 
+	
+
 	int length = 0;
 
 	int cur = 0;
 
 public:
+	bool isChangeButton = true;
+
+	void canChangeButton(bool c) {
+		isChangeButton = c;
+	}
+
 	void init(SDL_Renderer* renderer) override;
 
 	void render(SDL_Renderer* renderer) override;
